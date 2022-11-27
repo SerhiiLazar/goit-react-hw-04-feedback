@@ -1,0 +1,16 @@
+.section {
+    text-align: center;
+
+    outline: 2px solid gray;
+    padding: 10px;
+    margin-bottom: 5px;
+
+    border-radius: 5%;
+
+    background-color: rgb(6, 150, 247);
+}
+
+.title {
+    font-weight: 600;
+    font-size: 42px;
+}

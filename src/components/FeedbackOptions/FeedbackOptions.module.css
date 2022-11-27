@@ -1,0 +1,32 @@
+.feadbackItem {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.feadbackList {
+    
+    margin-right: 30px;
+}
+
+.feadbackList:last-child {
+    margin-right: 0;
+}
+
+.feadbackbtn {
+    text-transform: uppercase;
+    padding: 15px;
+
+    border-radius: 20%;
+    border: 3px;
+    box-shadow: 0 0 0 4px #cbd6ee;
+
+    cursor: pointer;
+    
+}
+

@@ -1,0 +1,37 @@
+.statistic__module {
+    list-style: none;
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.statistic__listGood{
+    background-color: rgb(85, 175, 85);
+}
+.statistic__listNeutral{
+    background-color: rgb(221, 221, 116);
+}
+.statistic__listBad{
+    background-color: rgb(231, 88, 88);
+}
+.statistic__list{
+    
+    color: white;
+    background-color: rgb(83, 78, 78);
+}
+
+li {
+    font-size: 28;
+    font-weight: 600;
+
+    padding: 30px;
+    border-radius: 100%;
+}
+
+.statistic__number {
+    padding: 10px;
+    font-weight: 900;
+
+
+}
+
