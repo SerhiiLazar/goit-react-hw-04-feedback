@@ -5,24 +5,23 @@ import Statistics from './Statistics';
 import Section from './Section';
 import Notification from './Notification';
 
-const isOptions = {good: 0, bad: 0, neutral: 0};
+const isOptions = { good: 0, bad: 0, neutral: 0 };
 
 export default function App() {
- const [options, setOptions] = useState(isOptions);
- const {good, bad, neutral} = options;
- const countTotalFeedback = good + bad + neutral;
+  const [options, setOptions] = useState(isOptions);
+  const { good, bad, neutral } = options;
+  const countTotalFeedback = good + bad + neutral;
 
-
-const countPositiveFeedbackPercentage = () => {
-    return Math.round(good / countTotalFeedback * 100);
+  const countPositiveFeedbackPercentage = () => {
+    return Math.round((good / countTotalFeedback) * 100);
   };
 
-const onFeadback = feedbackType => {
-  setOptions(state => ({
-    ...state, [feedbackType]: state[feedbackType] + 1
-  }))
-}
-
+  const onFeadback = feedbackType => {
+    setOptions(state => ({
+      ...state,
+      [feedbackType]: state[feedbackType] + 1,
+    }));
+  };
 
   return (
     <div className={css.wrapper}>
@@ -31,17 +30,18 @@ const onFeadback = feedbackType => {
       </Section>
 
       <Section title="Statistics">
-        {!countTotalFeedback 
-        ? <Notification messege="There is no feedback" />
-        : <Statistics
+        {!countTotalFeedback ? (
+          <Notification messege="There is no feedback" />
+        ) : (
+          <Statistics
             good={good}
             neutral={neutral}
             bad={bad}
             totalFeedback={countTotalFeedback}
             positivePersent={countPositiveFeedbackPercentage()}
-          />}
+          />
+        )}
       </Section>
     </div>
   );
 }
-
